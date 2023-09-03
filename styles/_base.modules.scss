@@ -1,0 +1,128 @@
+/* This would conatin all the utils */
+
+//Commencing the code
+$primary-color: rgb(231, 97, 149);
+$tertiary-color: #FFFFFF;
+$error-color: #E42C2C;
+$text-color-1: #414D63;
+$text-color-2: #111B2B;
+$text-color-3: #9A9EA6;
+$input-color-1: #F0F1F2;
+$modal-opacity: 0.3;
+
+$breakpoints: (
+  "phoneMini": 0px,
+  "phone": 300px,
+  "phonePro": 400px,
+  "tabletMini": 600px,
+  "tablet": 800px,
+  "tabletPro": 1000px,
+  "desktop": 1200px,
+);
+
+@mixin phoneMini {
+  @media only screen and (min-width: map-get($breakpoints, "phoneMini")) and (max-width: map-get($breakpoints, "phone")) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media only screen and (min-width: map-get($breakpoints, "phoneMini")) and (max-width: map-get($breakpoints, "phonePro")) {
+    @content;
+  }
+}
+
+@mixin phonePro {
+  @media only screen and (min-width: map-get($breakpoints, "phoneMini")) and (max-width: map-get($breakpoints, "tabletMini")) {
+    @content;
+  }
+}
+
+@mixin tabletMini {
+  @media only screen and (min-width: map-get($breakpoints, "tabletMini")) and (max-width: map-get($breakpoints, "tablet")){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: map-get($breakpoints, "tabletMini")) and (max-width: map-get($breakpoints, "tabletPro")){
+    @content;
+  }
+}
+
+@mixin tabletPro {
+  @media only screen and (min-width: map-get($breakpoints, "tabletMini")) and (max-width: map-get($breakpoints, "desktop")){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, "desktop")) {
+    @content;
+  }
+}
+
+@mixin breakpoint($min: 0, $max: 0) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin size ($width: 100%, $height: 100%) {
+    width: $width;
+    height: $height;
+}
+
+@mixin max-size ($max-width: 100%, $max-height: 100%) {
+    max-width: $max-width;
+    max-height: $max-height;
+}
+
+@mixin flexBar ($position: absolute, $display: flex, $align: none, $justify: none, $gap: 1%, $flex_d: row, $flex: none, $wrap: none) {
+    position: $position;
+    display: $display;
+    flex-wrap: $wrap;
+    flex-direction: $flex_d;
+    align-items: $align;
+    flex: $flex;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin text-layout($size: 14px, $color: $text-color-1, $l_height: 24px, $weight: 400, $style: normal) {
+    font-style: $style;
+    font-size: $size;
+    line-height: $l_height;
+    font-weight: $weight;
+    color: $color;
+}
+
+///Declaring the necessary font families
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Aclonica";
+  src: url("../public/fonts/Aclonica-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/Poppins-Regular.ttf") format('truetype');
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

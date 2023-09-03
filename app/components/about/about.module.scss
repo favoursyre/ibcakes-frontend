@@ -1,0 +1,174 @@
+/* This contains the scss for the about component */
+
+//Libraries -->
+@import "../../../styles/base.modules";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid green;
+    @include size(100%, 90%);
+    top: 230%;
+    z-index: 10;
+    @include flexBar($align: center, $justify: center, $gap: 3%);
+    left: 0%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 135%;
+        height: 40%;
+     }
+
+     @include phonePro {
+        //border: 1px solid red;
+        top: 170%;
+        flex-direction: column;
+     }
+
+    .image {
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 3%);
+        //border: 1px solid green;
+        @include size(45%, 90%);
+
+        @include phonePro {
+            //border: 1px solid red;
+            @include size(90%, 45%);
+            //top: 20%;
+         }
+
+        #elipses_1 {
+            position: absolute;
+            //border: 1px solid green;
+            top: 80%;
+            left: 0%;
+
+            @include tabletPro {
+                //border: 1px solid red;
+                top: 79%;
+             }
+
+             @include tablet {
+                //border: 1px solid red;
+                top: 76%;
+             }
+
+             @include tabletMini {
+                //border: 1px solid red;
+                top: 73%;
+             }
+
+             @include phonePro {
+                //border: 1px solid red;
+                top: 73%;
+             }
+
+             @include phone {
+                //border: 1px solid red;
+                top: 70%;
+             }
+
+             @include phoneMini {
+                //border: 1px solid red;
+                top: 60%;
+             }
+        }
+
+        #elipses_2 {
+            position: absolute;
+            //border: 1px solid green;
+            left: 78%;
+            top: 0%;
+
+            @include tabletPro {
+                //border: 1px solid red;
+                left: 72%;
+             }
+
+             @include tablet {
+                //border: 1px solid red;
+                left: 66%;
+             }
+
+             @include tabletMini {
+                //border: 1px solid red;
+                left: 63%;
+             }
+
+             @include phonePro {
+                //border: 1px solid red;
+                left: 65%;
+             }
+
+             @include phone {
+                //border: 1px solid red;
+                left: 63%;
+             }
+
+             @include phoneMini {
+                //border: 1px solid red;
+                left: 48%;
+             }
+        }
+
+        .image_slide {
+            position: relative;
+            //border: 1px solid green;
+            @include size(80%, 90%);
+            z-index: 100;
+            
+            img {
+                position: relative;
+                object-fit: cover;
+                @include size(100%, 100%);
+                border-radius: 10.43px;
+            }
+        }
+    }
+
+    .brief {
+        //border: 1px solid green;
+        @include size(45%, 90%);
+        font-family: "Poppins";
+        @include flexBar($position: relative, $align: flex-start, $justify: center, $flex_d: column, $gap: 3%);
+
+        @include tabletMini {
+            //border: 1px solid red;
+            gap: 0%;
+         }
+
+        @include phonePro {
+            //border: 1px solid red;
+            @include size(90%, 45%);
+            align-items: center;
+            gap: 0%;
+            top: 2%;
+         }
+
+         @include phoneMini {
+            //border: 1px solid red;
+            top: 12%;
+         }
+
+        h2 {
+            @include text-layout($size: 30px, $l_height: 25px, $color: $primary-color, $weight: 500);
+        }
+
+        p {
+            @include text-layout($size: 16px, $l_height: 25px);
+
+            @include tabletMini {
+                //border: 1px solid red;
+                font-size: 14px;
+             }
+
+             @include phone {
+                //border: 1px solid red;
+                font-size: 14px;
+             }
+
+             @include phoneMini {
+                //border: 1px solid red;
+                font-size: 12px;
+             }
+        }
+    }
+}

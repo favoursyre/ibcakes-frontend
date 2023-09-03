@@ -1,0 +1,230 @@
+/* This contains the scss for the similar product component */
+
+//Libraries -->
+@import "../../../../styles/base.modules";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid red;
+    @include size(100%, 50%);
+    top: 90%;
+    z-index: 10;
+    @include flexBar($align: center, $flex_d: column, $justify: center, $gap: 5%);
+    left: 0%;
+    font-family: "Poppins";
+    padding: 1% 0%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 50%;
+        height: 20%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        top: 115%;
+        height: 20%;
+     }
+
+    .heading {
+        //border: 1px solid red;
+        @include size(95%, 10%);
+        @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 0%);
+
+        button {
+            background-color: inherit;
+            border: none;
+        }
+    }
+
+    .slide {
+        //border: 1px solid red;
+        @include size(95%, 80%);
+        @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
+        flex-wrap: flex;
+        overflow: hidden;
+
+        @include phonePro {
+            height: 85%;
+        }
+
+        .carousel {
+            //border: 1px solid red;
+            position: relative;
+            @include size(25%, 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65.5%, rgba(0, 0, 0, 0.7) 91.08%);
+            border-radius: 10px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+            @include tabletPro {
+                //border: 1px solid red;
+                height: 100%;
+             }
+            
+             @include phonePro {
+                //border: 1px solid red;
+                @include size(30%, 100%);
+            }
+
+            img {
+                object-fit: cover;
+                position: relative;
+                @include size(100%, 100%);
+                //background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65.5%, rgba(0, 0, 0, 0.8) 91.08%);
+                z-index: -10;
+                border-radius: 10px;
+            }
+
+            .name_price_order {
+                //border: 1px solid red;
+                position: relative;
+                @include size(100%, 20%);
+                @include flexBar($align: center, $justify: flex-start, $flex_d: column, $gap: 1%);
+                top: 78%;
+
+                @include tabletPro {
+                    //border: 1px solid red;
+                    top: 70%;
+                    height: 30%;
+                }
+
+                @include phonePro {
+                    //border: 1px solid red;
+                    top: 70%;
+                }
+
+                .name {
+                    //border: 1px solid red;
+                    margin-bottom: 5px;
+                    width: 90%;
+                    @include text-layout($size: 12px, $l_height: 25px, $color: $tertiary-color, $weight: 500);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    top: -20%;
+                    @include size(90%, 40%);
+                    @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $gap: 1%);
+
+                    @include tabletMini {
+                        font-size: 10px;
+                        top: -22%;
+                    }
+
+                    @include phonePro {
+                        //border: 1px solid red;
+                        font-size: 9px;
+                        line-height: 5px;
+                        margin-bottom: -16px;
+                        height: 40%;
+                        align-items: center;
+                    }
+
+                    @include phoneMini {
+                        //border: 1px solid red;
+                        font-size: 8px;
+                        top: -22%;
+                    }
+                }
+
+                .price_order {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: space-between, $flex_d: row, $gap: 1%);
+                    @include size(90%, 50%);
+                    @include text-layout($size: 14px, $l_height: 25px, $color: $tertiary-color);
+                    top: -30%;
+
+                    @include tabletPro {
+                        //border: 1px solid red;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 0px;
+                    }
+
+                    @include tabletMini {
+                        font-size: 10px;
+                        top: -32%;
+                    }
+
+                    @include phonePro {
+                        //border: 1px solid red;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 0px;
+                    }
+
+                    @include phoneMini {
+                        top: -30%;
+                    }
+
+                    .price {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: space-between, $flex_d: row, $gap: 1%);
+
+                        @include tabletPro {
+                            //border: 1px solid red;
+                            @include size(100%, 50%);
+                        }
+
+                        @include phonePro {
+                            //border: 1px solid red;
+                            font-size: 10px;
+                            margin-bottom: -23px;
+                        }
+
+                        @include phoneMini {
+                            //border: 1px solid red;
+                            font-size: 8px;
+                        }
+                    }
+
+                    .order {
+                        @include text-layout($size: 12px, $l_height: 25px, $color: $tertiary-color);
+                        background: transparent;
+                        border: none;
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: space-between, $flex_d: row, $gap: 1%);
+
+                        @include tabletPro {
+                            //border: 1px solid red;
+                            @include size(100%, 50%);
+                            left: -5%;
+                        }
+
+                        @include tabletMini {
+                            font-size: 8px;
+                        }
+
+                        @include phonePro {
+                            top: -20%;
+                            font-size: 8px;
+                            left: -5%;
+                        }
+
+                        @include phoneMini {
+                            //border: 1px solid red;
+                            top: -40%;
+                            font-size: 6px;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                transform: scale(1.01);
+                box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+.cartOrderPage {
+    top: 100%;
+
+    @include tabletPro {
+        top: 56%;
+    }
+
+    @include phonePro {
+        top: 108%;
+    }
+}

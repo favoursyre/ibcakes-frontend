@@ -1,0 +1,295 @@
+/* This contains the scss for the header component */
+
+//Libraries -->
+@import "../../../styles/base.modules";
+
+//Commencing the code -->
+.header {
+    //border: 1px solid red;
+    @include max-size;
+    @include size($height: 9%);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    @include flexBar($position: absolute, $align: center, $justify: space-between);
+    padding: 1% 0%;
+    background-color: #ffe0ec;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        height: 6%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        display: none;
+    }
+
+    .logo {
+        //border: 1px solid red;
+        @include size(10%, 90%);
+        left: 5%;
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+
+        img {
+            //border: 1px solid red;
+            position: relative;
+            object-fit: contain;
+            @include size(100% 100%);
+        }
+    }
+
+    .category {
+        //border: 1px solid pink;
+        left: 0%;
+        @include size(40%, 90%);
+        font-family: "Poppins";
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+
+        @include tabletPro {
+            left: -5%;
+        }
+
+        @include tablet {
+            //border: 1px solid red;
+            width: 55%;
+            // left: 0%;
+        }
+
+        button {
+            border: none;
+            @include text-layout($size: 14px, $l_height: 27px);
+            background-color: transparent;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+
+            &:hover {
+                color: palevioletred;
+                //font-weight: 700;
+                transform: scale(1.1);
+            }
+        }
+
+        .activeCart {
+            //border: 1px solid pink;
+            color: red;
+        }
+
+        .inactiveCart {
+            //border: 1px solid blue;
+        }
+    }
+
+    .searchBar {
+        //border: 1px solid red;
+        @include flexBar($align: center, $justify: center, $gap: 2%);
+        left: 78%;
+        top: 80%;
+        @include size(20%, 50%);
+        z-index: 100;
+        border-radius: 3px;
+        background-color: $tertiary-color;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+
+        @include tabletPro {
+            @include size(20%, 40%);
+        }
+
+        form {
+            //border: 1px solid red;
+            font-family: "Inter";
+            @include size(90%, 80%);
+            @include flexBar($align: center, $justify: center, $gap: 0.5%);
+
+            input {
+                position: relative;
+                @include size(80%, 80%);  
+                border-radius: 4px;
+                border: 1px solid $tertiary-color;
+            }
+
+            ::placeholder {
+                position: relative;
+                font-size: 12px;
+                overflow: auto;
+              }
+            
+            :focus {
+                outline-color: rgb(108, 140, 199);
+            }
+
+            button {
+                border: 1px solid $tertiary-color;
+                border-radius: 4px;
+                background-color: $tertiary-color;
+                color: $primary-color;
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+                @include phone {
+                    margin-top: 0px;
+                    //border: 1px solid green;
+                    height: 25%;
+                }
+
+                &:hover {
+                    transform: scale(1.01);
+                    border: 1px solid $primary-color;
+                }
+            }
+        }
+    }
+
+    .inActiveSearch {
+        display: none;
+    }
+}
+
+.mobileHeader {
+    @include max-size;
+    @include size($height: 9%);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    @include flexBar($position: absolute, $align: center, $justify: space-between);
+    padding: 1% 0%;
+    background-color: #ffe0ec;
+    //border: 1px solid red;
+
+    .logo {
+        position: relative;
+        @include size(10% 100%);
+        left: 5%;
+
+        img {
+            //border: 1px solid red;
+            object-fit: contain;
+            @include size(100% 100%);
+        }
+    }
+
+    .menu {
+        left: -7%;
+        @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 8%);
+
+        button {
+            background-color: inherit;
+            border: none;
+        }
+
+        .activeCart {
+            color: red;
+        }
+    }
+
+    @include desktop {
+        display: none;
+    }
+
+    @include tabletPro {
+        display: none;
+    }
+}
+
+%menuBar {
+    @include max-size;
+    @include size(70%, 100%);
+    border-left: 1px solid rgba(0, 0, 0, 0.09);
+    top: 0px;
+    font-family: "Poppins";
+    left: 30%;
+    @include flexBar($position: absolute, $align: center, $flex_d: column, $justify: flex-start);
+    z-index: 100;
+    background-color: $tertiary-color;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    
+    @include desktop {
+        display: none;
+    }
+
+    @include tabletPro {
+        display: none;
+    }
+
+    header {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $flex_d: row, $justify: flex-end);
+        @include size(100%, 9%);
+        border-bottom: 2px solid rgba(239, 122, 175, 0.3);
+
+        .icon {
+            //border: 1px solid red;
+            position: relative;
+            left: -10%;
+        }
+    }
+
+    .searchBar {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+        @include size(90%, 5%);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+        padding: 3% 1%;
+
+        form {
+            //border: 1px solid red;
+            @include size(90%, 60%);
+            @include flexBar($align: center, $justify: center, $gap: 2%);
+            margin-bottom: 25px;
+            margin-top: 15px;
+            font-family: "Inter";
+
+            input {
+                position: relative;
+                @include size(80%, 100%);  
+                border-radius: 4px;
+                border: 1px solid $tertiary-color;
+            }
+
+            ::placeholder {
+                position: relative;
+                font-size: 12px;
+                overflow: auto;
+              }
+            
+            :focus {
+                outline-color: rgb(108, 140, 199);
+            }
+
+            button {
+                border: 1px solid $tertiary-color;
+                border-radius: 4px;
+                background-color: $tertiary-color;
+                color: $primary-color;
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                @include size(20%, 100%);
+
+                &:hover {
+                    transform: scale(1.01);
+                    border: 1px solid $primary-color;
+                }
+            }
+        }
+    }
+
+    button {
+        //border: 1px solid red;
+        position: relative;
+        top: 0%;
+        border: none;
+        background-color: inherit;
+        @include size(90%, 5%);
+        padding: 1% 1%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    }
+
+}
+
+.activeMenu {
+    transform: translateX(0%);
+    @extend %menuBar;
+}
+
+.inActiveMenu {
+    @extend %menuBar;
+    transform: translateX(100%);
+}

@@ -1,0 +1,768 @@
+/* This contains the scss for the order component */
+
+//Libraries -->
+@import "../../../../styles/base.modules";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 0%);
+    top: 12%;
+    left: 0px;
+    font-family: "Poppins";
+    //padding: 1% 1%;
+    @include size(100%, 80%);
+    background-image: linear-gradient(to bottom, #ffe0ec, white);
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 7.5%;
+        height: 40%;
+    }
+
+    @include phonePro {
+        top: 10%;  
+        height: 80%;
+    }
+
+    .activeCart {
+        //border: 1px solid green;
+        @include size(100%, 100%);
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+
+        @include phonePro {
+            flex-direction: column;
+            gap: 2%;
+        }
+
+        .summary {
+            //border: 1px solid red;
+            @include size(70%, 100%);
+            @include flexBar($position: relative, $flex_d: column, $align: center, $justify: center, $gap: 0%);
+
+            @include phonePro {
+                @include size(100%, 35%);
+            }
+    
+            .cartHeading {
+                //border: 1px solid red;
+                @include size(95%, 10%);
+                border-bottom: 1px solid rgba(239, 122, 175, 0.3);
+                @include flexBar($position: relative, $flex_d: column, $align: flex-start, $justify: center, $gap: 0%);
+
+                h3 {
+                    //position: relative;
+                    @include text-layout($size: 30px, $color: $primary-color, $l_height: 35px);
+                    //border: 1px solid red; 
+
+                    @include phonePro {
+                        font-size: 25px;
+                        line-height: 25px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 20px;
+                        line-height: 25px;
+                    }
+                }
+            }
+    
+            .cartList {
+                //border: 1px solid red;
+                @include size(95%, 70%);
+                @include flexBar($position: relative, $flex_d: column, $align: center, $justify: flex-start, $gap: 1%);
+                overflow-x: auto;
+                overflow-y: auto;
+
+                .cartItem {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
+                    @include size(98%, 18%);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+
+                    .image {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(8%, 85%);
+
+                        img {
+                            object-fit: cover;
+                            position: relative;
+                            @include size(100%, 100%);
+                            border-radius: 4px;
+                        }
+                    }
+
+                    .name {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
+                        @include size(25%, 85%);
+                        left: 7%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        @include phonePro {
+                            left: 5%;
+                        }
+
+                        span {
+                            font-size: 16px;
+
+                            @include tablet {
+                                font-size: 14px;
+                            }
+
+                            @include phonePro {
+                                font-size: 10px;
+                            }
+
+                            @include phoneMini {
+                                font-size: 8px;
+                            }
+                        }
+                    }
+
+                    .quantity {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 7%);
+                        @include size(15%, 85%);
+                        left: 13%;
+
+                        @include phonePro {
+                            width: 18%;
+                            left: 10%;
+                        }
+
+                        button {
+                            border-radius: 5px;
+                            border: 1px solid $primary-color;
+                            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                            @include size(30%, 55%);
+                            @include flexBar($position: relative, $align: center, $justify: center, $gap: 7%);
+
+                            @include phonePro {
+                                @include flexBar($position: relative, $align: center, $justify: center);
+                                @include size(30%, 90%);
+                                font-size: 10px;
+                            }
+
+                            @include phoneMini {
+                                font-size: 8px;
+                            }
+            
+                            &:hover {
+                                transform: scale(1.01);
+                            }
+                        }
+
+                        span {
+                            font-size: 16px;
+
+                            @include phone {
+                                font-size: 12px;
+                            }
+                        }
+            
+                        #btn1 {
+                            background-color: white;
+                            color: $primary-color;
+                        }
+            
+                        #btn2 {
+                            background-color: $primary-color;
+                            color: white;
+                        }
+                    }
+
+                    .delete {
+                        //border: 1px solid red;
+                        border-radius: 5px;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 7%);
+                        @include size(13%, 55%);
+                        left: 20%;
+                        background-color: white;
+                        color: $primary-color;
+
+                        @include phonePro {
+                            left: 15%;
+                            height: 70%;
+                        }
+
+                        span {
+                            font-size: 14px;
+
+                            @include phonePro {
+                                font-size: 10px;
+                            }
+
+                            @include phoneMini {
+                                font-size: 8px;
+                            }
+                        }
+
+                        &:hover {
+                            transform: scale(1.01);
+                        }
+                    }
+
+                    .price {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+                        @include size(12%, 85%);
+                        left: 25%;
+
+                        @include phonePro {
+                            left: 20%;
+                        }
+
+                        span {
+                            font-size: 16px;
+
+                            @include phonePro {
+                                font-size: 10px;
+                            }
+
+                            @include phoneMini {
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .cartDeliveryFee {
+                //border: 1px solid red;
+                @include size(95%, 7%);
+                @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 2%);
+                border-top: 1px solid rgba(239, 122, 175, 0.3);
+                border-bottom: 1px dotted rgba(0, 0, 0, 0.09);
+
+                .title {
+                    font-size: 16px;
+
+                    @include phonePro {
+                        font-size: 12px;
+                    }
+                }
+
+                .price {
+                    //border: 1px solid red;
+                    left: -1%;
+                    @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 2%);
+
+                    @include phonePro {
+                        left: -3%;
+                    }
+
+                    span {
+                        font-size: 16px;
+
+                        @include phonePro {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+            .cartTotal {
+                //border: 1px solid red;
+                @include size(95%, 8%);
+                @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 2%);
+
+                .title {
+                    font-size: 16px;
+                    font-weight: 600;
+
+                    @include phonePro {
+                        font-size: 12px;
+                    }
+                }
+
+                .price {
+                    //border: 1px solid red;
+                    left: -1%;
+                    @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 2%);
+
+                    @include phonePro {
+                        left: -3%;
+                    }
+
+                    span {
+                        font-size: 16px;
+                        
+
+                        @include phonePro {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .form {
+            //border: 1px solid red;
+            @include size(30%, 100%);
+            @include flexBar($position: relative, $flex_d: column, $align: flex-start, $justify: center, $gap: 0%);
+
+            @include phonePro {
+                @include size(100%, 60%);
+                gap: 2%;
+                //left: 2%;
+            }
+
+            @include phoneMini {
+                left: 2%;
+                top: 2%;
+                //align-items: center;
+            }
+
+            .formHeading {
+                //border: 1px solid red;
+                @include size(90%, 10%);
+                border-bottom: 1px solid rgba(239, 122, 175, 0.3);
+                @include flexBar($position: relative, $flex_d: column, $align: flex-start, $justify: center, $gap: 0%);
+                left: 2%;
+
+                h3 {
+                    //position: relative;
+                    @include text-layout($size: 25px, $color: $primary-color, $l_height: 25px);
+                    //border: 1px solid red; 
+
+                    @include tablet {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+
+                    @include tabletMini {
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+
+                    @include phonePro {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            form {
+                //border: 1px solid red;
+                @include size(90%, 86%);
+                @include flexBar($position: relative, $flex_d: column, $align: center, $justify: center, $gap: 1%);
+                left: 2%;
+
+                @include phonePro {
+                    //border: 1px solid green;
+                    gap: 0%;
+                }
+
+                label {
+                    //border: 1px solid red;
+                    width: 80%;
+                    margin-bottom: -2px;
+                    font-size: 16px;
+                    font-weight: 600;
+
+                    @include tabletPro {
+                        font-size: 14px;
+                    }
+
+                    @include phonePro {
+                        font-size: 14px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 12px;
+                    }
+                }
+
+                input {
+                    @include size(80%, 7%);
+
+                    @include phone {
+                        height: 10%;
+                        margin-bottom: 0px;
+                    }
+
+                    @include phoneMini {
+                        height: 15%;
+                    }
+                }
+
+                ::placeholder {
+                    position: relative;
+                    font-size: 12px;
+                    overflow: auto;
+                  }
+                
+                :focus {
+                    outline-color: rgb(108, 140, 199);
+                }
+
+                button {
+                    @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+                    @include size(80%, 10%);
+                    border-radius: 5px;
+                    background-color: $primary-color;
+                    color: white;
+                    border: 1px solid $primary-color;
+                    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+                    span {
+                        font-size: 15px;
+                    }
+    
+                    &:hover {
+                        transform: scale(1.01);
+                    }
+                }
+            }
+        }
+    }
+
+    .emptyCart {
+        //border: 1px solid green;
+        @include size(80%, 80%);
+        @include flexBar($position: relative, $flex_d: column, $align: center, $justify: center, $gap: 3%);
+        border-radius: 10px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+        @include phone {
+
+        }
+
+        .logo {
+            //border: 1px solid green;
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 3%);
+            @include size(12%, 27%);
+            color: $primary-color;
+
+            @include phonePro {
+                @include size(35%, 20%);
+            }
+        }
+
+        span {
+            font-size: 18px;
+            //border: 1px solid red;
+
+            @include tablet {
+                font-size: 16px;
+            }
+
+            @include phonePro {
+                font-size: 14px;
+                width: 90%;
+                text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+        }
+
+        button {
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+            @include size(20%, 12%);
+            border-radius: 5px;
+            background-color: $primary-color;
+            color: white;
+            border: 1px solid $primary-color;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            top: 5%;
+
+            @include tabletPro {
+                width: 30%;
+            }
+
+            @include phonePro {
+                width: 60%;
+                gap: 5%;
+            }
+
+            @include phonePro {
+                width: 70%;
+                //gap: 0%;
+            }
+
+            span {
+                //font-size: 15px;
+
+                @include tablet {
+                    //font-size: 13px;
+                }
+
+                @include phonePro {
+                    width: 60%;
+                }
+
+                @include phoneMini {
+                    //font-size: 10px;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.01);
+            }
+        }
+    }
+}
+
+.deleteModal {
+    //border: 1px solid red;
+    @include flexBar($align: flex-start, $justify: center, $gap: 5%);
+    @include size(100%, 190%);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    top: 0%;
+    left: 0%;
+    font-family: "Inter";
+
+    @include tabletPro {
+        height: 102%;
+    }
+
+    @include phonePro {
+        height: 170%;
+    }
+
+    @include phoneMini {
+        //height: 299%;
+    }
+
+    .mainModal {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 18%);
+        @include size(40%, 20%);
+        background-color: $tertiary-color;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        top: 20%;
+
+        @include tabletPro {
+            gap: 15%;
+        }
+
+        @include tabletPro {
+            height: 15%;
+        }
+
+        @include phonePro {
+            gap: 12%;
+            @include size(80%, 15%);
+        }
+
+        @include phoneMini {
+            height: 15%;
+        }
+
+        .header {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 22%);
+            @include size(90%, 15%);
+            @include text-layout($size: 16px, $l_height: 24px, $color: $text-color-2);
+
+            @include tabletMini {
+                top: 5%;
+            }
+
+            @include phoneMini {
+                font-size: 14px;
+            }
+
+            button {
+                background-color: inherit;
+                border: none;
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                font-size: 18px;
+                font-weight: 600;
+                color: $text-color-2;
+
+                &:hover {
+                    border-radius: 5px;
+                    transform: scale(1.01);
+                    box-shadow: 0px 2px 4px rgba(52, 69, 99, 0.18);
+                }
+            }
+        }
+
+        .body {
+            //border: 1px solid red;
+            text-align: center;
+            @include text-layout($size: 14px, $l_height: 24px);
+
+            @include tabletPro {
+                width: 80%;
+            }
+
+            @include phonePro {
+                width: 80%;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+        }
+
+        .deleteButton {
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+            border-radius: 5px;
+            color: $primary-color;
+            background-color: $tertiary-color;
+            border: 1px solid $primary-color;
+            font-size: 16px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            @include size(30%, 20%);
+            top: -5%;
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            &:hover {
+                border-radius: 5px;
+                transform: scale(1.01);
+                box-shadow: 0px 2px 4px rgba(52, 69, 99, 0.18);
+            }
+        }
+    }
+}
+
+.inActiveDeleteModal {
+    display: none;
+}
+
+
+.paymentModal {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 5%);
+    @include size(100%, 190%);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    left: 0%;
+    top: 0%;
+    font-family: "Inter";
+
+    @include tabletPro {
+        height: 102%;
+    }
+
+    @include phonePro {
+        height: 170%;
+    }   
+
+    .container {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
+        @include size(40%, 20%);
+        background-color: $tertiary-color;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        top: -20%;
+
+        @include tabletPro {
+            gap: 15%;
+        }
+
+        @include phonePro {
+            gap: 12%;
+            @include size(80%, 15%);
+        }
+
+        header {
+            //border: 1px solid red;
+            @include flexBar($align: center, $justify: flex-end, $gap: 3%);
+            @include size(90%, 10%);
+            top: 5%;
+
+            @include phonePro {
+                top: 5%;
+            }
+
+            button {
+                background-color: inherit;
+                color: $primary-color;
+                border: none;
+                border-radius: 5px;
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                z-index: 100;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                left: 15%;
+
+                .close {
+                    //border: 1px solid red;
+                    position: relative;
+                    //align-items: flex-end;
+                }
+
+                &:hover {
+                    transform: scale(1.01);
+                    box-shadow: 0px 2px 4px rgba(52, 69, 99, 0.18);
+                }
+            }
+        }
+
+        span {
+            //border: 1px solid red;
+            @include text-layout($size: 18px, $l_height: 24px, $color: $text-color-2);
+            @include size(80%, 50%);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            text-align: center;
+            top: 2%;
+
+            @include phoneMini {
+                font-size: 14px;
+            }
+        }
+
+        .success {
+            //border: 1px solid blue;
+            top: 8%;
+
+            @include phoneMini {
+                line-height: 18px;
+            }
+        }
+
+        .circle {
+            @include size(60px, 60px);
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid $primary-color;
+            border-radius: 50%;
+            top: -20%;
+            position: relative;
+            animation: spin 1s linear infinite;
+
+            @include phoneMini {
+                @include size(50px, 50px);
+            }
+          }
+
+          button {
+            //border: 1px solid red;
+            @include size(50%, 15%);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            background-color: $primary-color;
+            border: none;
+            border-radius: 5px;
+
+            @include phoneMini {
+                width: 60%;
+            }
+
+            span {
+                color: $tertiary-color;
+            }
+          }
+    }
+}
+
+.inActivePaymentModal {
+    display: none;
+}

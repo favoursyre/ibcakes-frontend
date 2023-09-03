@@ -1,0 +1,115 @@
+/* This contains the scss for the about component */
+
+//Libraries -->
+@import "../../../styles/base.modules";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid green;
+    @include size(100%, 60%);
+    top: 315%;
+    left: 0%;
+    @include flexBar($align: center, $justify: flex-start, $flex_d: column, $gap: 3%);
+
+    @include tablet {
+        border: 1px solid red;
+        top: 175%;
+        height: 25%;
+     }
+
+     @include phone {
+        //border: 1px solid red;
+        height: 25%;
+        top: 265%;
+     }
+
+    h2 {
+        @include text-layout($size: 30px, $l_height: 25px, $color: $primary-color, $weight: 500);
+
+        @include phone {
+            //border: 1px solid red;
+            font-size: 20px;
+            text-align: center;
+         }
+    }
+
+    #ornament_1, #ornament_2, #ornament_3 {
+        position: absolute;
+    }
+
+    #ornament_1 {
+        left: 82%;
+        top: 40%;
+    }
+
+    #ornament_2 {
+        left: 15%;
+        top: 15%;
+    }
+
+    #ornament_3 {
+        left: 75%;
+        top: 5%;
+    }
+
+    .testimony_slide {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: row, $gap: 3%);
+        @include size(60%, 50%);
+        //border: 1px solid green;
+        z-index: 10;
+        padding: 1% 1%;
+        background-color: $tertiary-color;
+        border-radius: 10px;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 6px 12px rgba(0, 0, 0, 0.2);
+
+        @include phone {
+            //border: 1px solid red;
+            width: 90%;
+            height: 55%;
+         }
+        
+        .image {
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: row, $gap: 3%);
+            //border: 1px solid red;
+            @include size(20%, 90%);
+
+            #elipse {
+                position: absolute;
+                @include size(100%, 100%);
+            }
+
+            #image {
+                @include size(100%, 90%);
+                border-radius: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(75%, 90%);
+            @include flexBar($position: relative, $align: flex-start, $justify: center, $flex_d: column, $gap: -5px);
+
+            h3 {
+                //border: 1px solid red;
+                @include text-layout($size: 16px, $l_height: 20px, $weight: 600);
+                margin-bottom: 0px;
+
+                @include phone {
+                    margin-bottom: -5px;
+                    font-size: 14px;
+                }
+            }
+
+            p {
+                //border: 1px solid red;
+                position: relative;
+                font-size: 14px;
+
+                @include phone {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

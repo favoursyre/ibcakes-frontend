@@ -1,0 +1,248 @@
+/* This contains the scss for the footer component */
+
+//Libraries -->
+@import "../../../styles/base.modules";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid green;
+    @include size(100%, 30%);
+    top: 330%;
+    z-index: 10;
+    @include flexBar($align: center, $justify: center, $gap: 3%);
+    left: 0%;
+    font-family: "Poppins";
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 185%;
+        height: 20%;
+     }
+
+     @include phonePro {
+        //border: 1px solid red;
+        top: 270%;
+        height: 25%;
+     }
+
+     @include phoneMini {
+        //border: 1px solid red;
+        top: 290%;
+     }
+
+    .subSection {
+        //border: 1px solid black;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 3%);
+        @include size(70%, 100%);
+
+        @include tablet {
+            //border: 1px solid red;
+            width: 95%;
+        }
+
+        @include phonePro {
+            //border: 1px solid red;
+            width: 95%;
+        }
+
+        .contact {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: space-between, $flex_d: row, $gap: 3%);
+            @include size(100%, 80%);
+            max-width: 100%;
+            border-top: 2px solid rgba(239, 122, 175, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+
+            .logo {
+                //border: 1px solid green;
+                @include size(20%, 70%);
+                @include flexBar($position: relative, $align: center, $justify: center, $flex_d: row, $gap: 3%);
+                left: 5%;
+
+                @include tabletPro {
+                    //border: 1px solid red;
+                    @include size(25%, 70%);
+                 }
+
+                 @include phonePro {
+                    //border: 1px solid red;
+                    width: 30%;
+                    left: 0%;
+                }
+
+                img {
+                    //border: 1px solid green;
+                    object-fit: cover;
+                    @include size(100%, 100%);
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+
+                    @include phonePro {
+                        //border: 1px solid red;
+                        @include size(100%, 70%);
+                        left: 0%;
+                    }
+                }
+            }
+
+            .info {
+                //border: 1px solid saddlebrown;
+                @include flexBar($position: relative, $align: flex-start, $justify: center, $flex_d: column, $gap: 10px);
+                @include size(50%, 70%);
+                @include text-layout($size: 12px, $l_height: 18px);
+
+                @include phonePro {
+                    //border: 1px solid red;
+                    font-size: 12px;
+                    width: 60%;
+                }
+
+                @include phoneMini {
+                    //border: 1px solid red;
+                    font-size: 10px;
+                    width: 60%;
+                }
+
+                .info_1, .info_2, .info_3 {
+                    //border: 1px solid green;
+                    width: 100%;
+                    @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: row, $gap: 1%);
+                }
+
+                .info_3 {
+                    gap: 3%;
+
+                    #email:hover {
+                        color: red;
+                    }
+                    
+                    #whatsapp:hover {
+                        color: rgb(21, 209, 21);
+                    }
+                    
+                    #instagram:hover {
+                        color: #e9497e;
+                    }
+                    
+                    #facebook:hover {
+                        color: rgb(30, 30, 255);
+                    }
+                }
+
+                .icon {
+
+                    @include phoneMini {
+                        //border: 1px solid red;
+                        font-size: 1rem;
+                    }
+    
+
+                }
+            }
+        }
+
+        .copyright {
+            //border: 1px solid violet;
+            @include size(100%, 10%);
+            @include flexBar($position: relative, $align: center, $justify: space-between, $flex_d: row, $gap: 3%);
+            @include text-layout($size: 11px, $l_height: 18px);
+
+            @include phonePro {
+                font-size: 10px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+.contactPage {
+    //border: 1px solid red;
+    top: 140%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 90%;
+    }
+
+    @include phonePro {
+        top: 145%;
+        //border: 1px solid red;
+    }
+}
+
+.customOrderPage {
+    //border: 1px solid red;
+    top: 160%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 85%;
+    }
+
+    @include phone {
+        top: 155%;
+        //border: 1px solid red;
+    }
+}
+
+.productInfoPage {
+    //border: 1px solid red;
+    top: 150%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 80%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        top: 150%;
+     }
+}
+
+.cartOrderPage {
+    //border: 1px solid red;
+    top: 160%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 82%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        top: 145%;
+     }
+}
+
+.searchPage {
+    //border: 1px solid red;
+    top: 100%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 80%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        top: 95%;
+    }
+}
+
+.cartReceiptPage {
+    //border: 1px solid red;
+    top: 135%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 80%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        top: 145%;
+    }
+}
