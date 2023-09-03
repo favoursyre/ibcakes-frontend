@@ -12,7 +12,7 @@ import styles from "./layout.module.scss"
 export const metadata = {
   title: 'IB Cakes & Catering',
   icons: {
-    icon: 'ib_favicon.png',
+    icon: 'favicon.png',
   },
   description: 'Website for shopping for your cakes and pastries',
   keywords: "ecommerce, cake, catering, pastry"
