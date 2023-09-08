@@ -7,6 +7,7 @@
 
 ## Overview
 This is the frontend of IB Cakes & Catering website. 
+The backend code for this website can be found at `https://github.com/favoursyre/ibcakes_backend.git` 
 
 ## Languages
 * HTML
