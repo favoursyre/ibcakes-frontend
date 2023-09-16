@@ -451,7 +451,10 @@ const Order = () => {
             <button onClick={() => setDeleteModal(false)}><CloseIcon /></button>
           </div>
           <span className={styles.body}>Are you sure you want to delete this item from your cart?</span>
-          <button onClick={e => deleteItem(e, null, 1)} className={styles.deleteButton}>
+          <button onClick={e => {
+            deleteItem(e, null, 1)
+            window.location.reload()
+          }} className={styles.deleteButton}>
               <span>Delete</span>
           </button>
         </div>

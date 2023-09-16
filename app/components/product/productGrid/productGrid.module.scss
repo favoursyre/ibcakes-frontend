@@ -27,6 +27,10 @@
         height: 70%;
     }
 
+    button {
+        outline: none;
+    }
+
     .product_brief {
         //border: 1px solid black;
         text-align: center;
@@ -57,6 +61,7 @@
 
          @include phonePro {
             //border: 1px solid red;
+            height: 10%;
             width: 90%;
         }
 
@@ -70,11 +75,13 @@
             transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 
             img {
-               // border: 1px solid black;
+               //border: 1px solid black;
                 position: relative;
                 height: 200%;
 
-
+                @include phonePro {
+                    @include size(20%, 300%);
+                }
             }
 
             &:hover {
@@ -139,12 +146,12 @@
                 border-radius: 4px;
 
                 @include phonePro {
-                    height: 300%;
-                    top: 90%;
+                    height: 500%;
+                    top: 100%;
                 }
 
                 @include phoneMini {
-                    height: 400%;
+                    //height: 400%;
                 }
 
                 button {
@@ -199,6 +206,7 @@
 
          @include phonePro {
             //border: 1px solid red;
+            top: 4%;
             @include size(90%, 50%);
         }
 
@@ -273,18 +281,18 @@
                     @include phonePro {
                         //border: 1px solid red;
                         font-size: 10px;
-                        top: -18%;
+                        top: -30%;
                         line-height: 5px;
                         margin-bottom: -15px;
                         height: 30%;
                     }
 
                     @include phone {
-                        top: -20%;
+                        //top: -20%;
                     }
 
                     @include phoneMini {
-                        top: -22%;
+                        //top: -22%;
                         font-size: 8px;
                     }
                 }

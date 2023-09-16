@@ -20,7 +20,12 @@
     }
 
     @include phonePro {
-        top: 10%;
+        top: 60px;
+        height: 900px;
+    }
+
+    button {
+        outline: none;
     }
 
     h2 {
@@ -48,10 +53,11 @@
             margin-top: 0px;
             width: 90%;
             text-align: center;
+            font-size: 14px;
         }
 
         @include phoneMini {
-            font-size: 14px;
+            //font-size: 14px;
         }
     }
 
@@ -75,10 +81,9 @@
             input {
                 @include size(60%, 7%);
                 margin-bottom: 0px;
-                
 
                 @include phonePro {
-                    @include size(90%, 10%);
+                    @include size(90%, 40px);
                 }
             }
 
@@ -87,11 +92,13 @@
                 font-size: 14px;
                 font-weight: 600;
                 width: 60%;
+                position: relative;
                 
                 @include phonePro {
                     //border: 1px solid green;
                     font-size: 12px;
                     width: 90%;
+                    top: -1%;
                 }
             }
 
@@ -203,6 +210,10 @@
                         //border: 1px solid red;
                         @include size(90%, 5%);
                         @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 5%);
+
+                        @include phonePro {
+                            top: 1%;
+                        }
 
                         span {
                             //border: 1px solid red;

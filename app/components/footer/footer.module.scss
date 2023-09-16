@@ -5,7 +5,7 @@
 
 //Commencing the code -->
 .main {
-    //border: 1px solid green;
+    //border: 1px solid red;
     @include size(100%, 30%);
     top: 330%;
     z-index: 10;
@@ -21,13 +21,17 @@
 
      @include phonePro {
         //border: 1px solid red;
-        top: 270%;
-        height: 25%;
+        top: 280%;
+        height: 220px;
      }
 
      @include phoneMini {
         //border: 1px solid red;
-        top: 290%;
+        //top: 290%;
+     }
+
+     button {
+        outline: none;
      }
 
     .subSection {
@@ -111,6 +115,10 @@
                 .info_3 {
                     gap: 3%;
 
+                    @include phonePro {
+                        gap: 10%;
+                    }
+
                     #email:hover {
                         color: red;
                     }
@@ -148,6 +156,7 @@
 
             @include phonePro {
                 font-size: 10px;
+                flex-direction: column;
             }
 
             @include phoneMini {
@@ -167,7 +176,7 @@
     }
 
     @include phonePro {
-        top: 145%;
+        top: 1000px;
         //border: 1px solid red;
     }
 }
@@ -182,7 +191,7 @@
     }
 
     @include phone {
-        top: 155%;
+        top: 1000px;
         //border: 1px solid red;
     }
 }
@@ -213,22 +222,22 @@
 
     @include phonePro {
         //border: 1px solid red;
-        top: 145%;
+        top: 900px;
      }
 }
 
 .searchPage {
     //border: 1px solid red;
-    top: 100%;
+    top: 170%;
 
     @include tabletPro {
         //border: 1px solid red;
-        top: 80%;
+        top: 110%;
     }
 
     @include phonePro {
         //border: 1px solid red;
-        top: 95%;
+        top: 150%;
     }
 }
 

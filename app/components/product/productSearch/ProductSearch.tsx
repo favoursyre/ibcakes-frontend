@@ -20,7 +20,25 @@ import { IProduct } from '@/app/utils/interfaces';
     const router = useRouter()
     const [keyword, SetKeyword] = useState(keyword_)
     const [foundProducts, setFoundProducts] = useState(query_)
-  console.log("Found Products: ", foundProducts)
+    const [currentURL, setCurrentURL] = useState(window.location.href)
+  //console.log("Found Products: ", foundProducts)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        if (currentURL === window.location.href) {
+            //console.log('not changed')
+            undefined
+        } else {
+            //console.log("changed")
+            clearInterval(intervalId)
+            setCurrentURL(window.location.href)
+           window.location.reload()
+        }
+        
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+}, [currentURL]);
 
   ///This function triggers when handle click is clicked
   const handleClick = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>, id: string | undefined): void => {

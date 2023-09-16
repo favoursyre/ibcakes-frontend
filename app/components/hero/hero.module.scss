@@ -26,11 +26,16 @@
         flex-direction: column-reverse;
     }
 
+    button {
+        outline: none;
+    }
+
     .hero_brief {
         //border: 1px solid blue;
         @include size(50%, 90%);
         @include flexBar($position: relative, $flex_d: column, $align: none, $justify: center, $gap: 20px);
         //left: 5%;
+        z-index: 1;
 
         @include tabletPro {
             //border: 1px solid red;
@@ -42,7 +47,7 @@
             //border: 1px solid red;
             width: 90%;
             height: 50%;
-            top: -5%;
+            top: 0%;
             left: 0%;
         }
 
@@ -88,6 +93,7 @@
             @include phonePro {
                 //border: 1px solid red;
                 justify-content: center;
+                height: 18%;
             }
             
             button {
@@ -103,7 +109,7 @@
 
                 @include phonePro {
                     //border: 1px solid red;
-                    @include size(40%, 100%);
+                    @include size(45%, 100%);
                 }
 
                 @include phoneMini {
@@ -135,9 +141,9 @@
         }
 
         @include phonePro {
-            top: 0%;
+            top: 3%;
             width: 90%;
-            height: 50%;
+            height: 60%;
         }
 
         img {
@@ -184,7 +190,7 @@
 
         @include phonePro {
             //border: 1px solid red;
-            top: 35%;
+            top: 65%;
             left: 80%;
         }
     }
@@ -207,9 +213,9 @@
 
          @include phonePro {
             //border: 1px solid red;
-            height: 60%;
+            height: 70%;
             left: 28%;
-            top: 22%;
+            top: 25%;
             transform: rotate(7.93deg);
          }
     }

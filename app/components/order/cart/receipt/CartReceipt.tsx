@@ -34,7 +34,7 @@ const CartReceipt = ({ cart_ }: { cart_: ICartOrder }) => {
                 </div>
                 <div className={styles.orderDate}>
                     <span>Order Date:</span>
-                    <span><strong>{cart && cart.createdAt ? formatDateMongo(cart.createdAt) : ""}</strong></span>
+                    <span className={styles.span2}><strong>{cart && cart.createdAt ? formatDateMongo(cart.createdAt) : ""}</strong></span>
                 </div>
             </div>
             <div className={styles.deliverySection}>

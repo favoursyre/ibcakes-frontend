@@ -5,7 +5,7 @@
 
 //Commencing the code -->
 .main {
-    border: 1px solid red;
+    //border: 1px solid red;
     @include size(100%, 70%);
     top: 13%;
     z-index: 10;
@@ -28,8 +28,12 @@
         height: 90%;
     }
 
+    button {
+        outline: none
+     }
+
     .imageSection {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include size(50%, 100%);
         @include flexBar($position: relative, $flex_d: column, $align: center, $justify: center, $gap: 1%);
 
@@ -38,7 +42,7 @@
         }
 
         .mainImage {
-            border: 1px solid red;
+            //border: 1px solid red;
             @include size(70%, 75%);
             border-radius: 5px;
             //background-color: $tertiary-color;
@@ -54,7 +58,7 @@
         }
 
         .imageList {
-            border: 1px solid green;
+            //border: 1px solid green;
             @include size(80%, 25%);
             @include flexBar($position: relative, $align: center, $justify: center, $gap: 1%);
             overflow-y: hidden;
@@ -65,7 +69,7 @@
             }
 
             img {
-                border: 1px solid red;
+                border: 1px solid $text-color-3;
                 object-fit: cover;
                 @include size(22%, 95%);
                 position: relative;
@@ -78,6 +82,10 @@
                 }
             }
 
+            .activeImage {
+                border: 1px solid $primary-color;
+            }
+
             // @include phonePro {
             //     width: 80%;
             // }
@@ -85,7 +93,7 @@
     }
 
     .briefSection {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include size(50%, 100%);
         @include flexBar($position: relative, $flex_d: column, $align: flex-start, $justify: flex-start, $gap: 5%);
 
@@ -171,7 +179,7 @@
         }
 
         .deliveryDate {
-            border: 1px solid red;
+            //border: 1px solid red;
             @include text-layout($size: 15px, $l_height: 24px, $weight: 400);
             @include size(90%, 5%);
             position: relative;
@@ -190,7 +198,7 @@
         }
 
         .order_cart {
-            border: 1px solid red;
+            //border: 1px solid red;
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 4%);
             @include size(70%, 10%);
 

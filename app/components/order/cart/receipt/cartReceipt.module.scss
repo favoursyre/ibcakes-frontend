@@ -23,6 +23,7 @@
     @include phonePro {
         top: 10%;  
         height: 100%;
+        padding: 5% 0%;
     }
 
     h2 {
@@ -45,6 +46,7 @@
 
         @include phonePro {
             margin-top: 0px;
+            font-size: 14px;
         }
 
         @include phoneMini {
@@ -61,7 +63,8 @@
         @include text-layout($size: 14px, $l_height: 25px, $color: $text-color-2, $weight: 400);
 
         @include phonePro {
-            width: 90%;
+            width: 100%;
+            font-size: 10px;
         }
 
         @include phoneMini {
@@ -76,6 +79,7 @@
 
             @include phonePro {
                 line-height: 20px;
+                top: 0%;
             }
 
             .orderId {
@@ -87,6 +91,7 @@
                 @include phonePro {
                     flex-direction: column;
                     text-align: start;
+                    margin-bottom: 10px;
                 }
 
                 span {
@@ -98,10 +103,15 @@
                 }
 
                 .span2 {
-                    
+                    //border: 1px solid red; 
+                     
+                    @include phonePro {
+                        font-size: 10px;
+                    }
+
                     @include phoneMini {
                         //border: 1px solid blue;
-                        font-size: 8px;
+                        //font-size: 8px;
                     }
                 }
             }
@@ -114,6 +124,7 @@
                 @include phonePro {
                     flex-direction: column;
                     text-align: end;
+                    margin-bottom: 10px;
                 }
 
                 span {
@@ -121,6 +132,19 @@
 
                     @include phonePro {
                         @include size(100%, 50%);
+                    }
+                }
+
+                .span2 {
+                    //border: 1px solid red; 
+                     
+                    @include phonePro {
+                        font-size: 10px;
+                    }
+
+                    @include phoneMini {
+                        //border: 1px solid blue;
+                        //font-size: 8px;
                     }
                 }
             }

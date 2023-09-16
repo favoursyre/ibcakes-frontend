@@ -26,6 +26,10 @@
         height: 20%;
      }
 
+     button {
+        outline: none
+     }
+
     .heading {
         //border: 1px solid red;
         @include size(95%, 10%);
@@ -195,9 +199,9 @@
                         }
 
                         @include phonePro {
-                            top: -20%;
+                            top: -5px;
                             font-size: 8px;
-                            left: -5%;
+                            left: -9%;
                         }
 
                         @include phoneMini {
@@ -225,6 +229,21 @@
     }
 
     @include phonePro {
-        top: 108%;
+        top: 700px;
+    }
+}
+
+.searchPage {
+    //border: 1px solid red;
+    top: 100%;
+
+    @include tabletPro {
+        //border: 1px solid red;
+        top: 80%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        top: 650px;
     }
 }

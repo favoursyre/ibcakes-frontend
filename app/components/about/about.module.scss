@@ -20,7 +20,8 @@
 
      @include phonePro {
         //border: 1px solid red;
-        top: 170%;
+        top: 175%;
+        height: 100%;
         flex-direction: column;
      }
 
@@ -95,17 +96,18 @@
 
              @include phonePro {
                 //border: 1px solid red;
-                left: 65%;
+                left: 60%;
+                top: -5%;
              }
 
              @include phone {
                 //border: 1px solid red;
-                left: 63%;
+                //left: 63%;
              }
 
              @include phoneMini {
                 //border: 1px solid red;
-                left: 48%;
+                //left: 48%;
              }
         }
 
@@ -150,6 +152,10 @@
 
         h2 {
             @include text-layout($size: 30px, $l_height: 25px, $color: $primary-color, $weight: 500);
+
+            @include phonePro {
+               margin-bottom: 0px;
+            }
         }
 
         p {
@@ -160,9 +166,11 @@
                 font-size: 14px;
              }
 
-             @include phone {
+             @include phonePro {
                 //border: 1px solid red;
+                line-height: 20px;
                 font-size: 14px;
+                text-align: center;
              }
 
              @include phoneMini {

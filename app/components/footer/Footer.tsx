@@ -68,7 +68,7 @@ const Footer = ({ contact_ }: { contact_: IContact }) => {
                 </span>
                 <span>
                     Website developed by{" "}
-                    <a href="https://www.google.com" target="_blank">
+                    <a href="https://favoursyre.vercel.app" target="_blank">
                     Favour Syre
                     </a>
                 </span>

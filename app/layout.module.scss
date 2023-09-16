@@ -35,4 +35,8 @@ html, body {
     ::-webkit-scrollbar-thumb:hover {
         background-color: $primary-color;  /* Color of the thumb on hover */
     }
+
+    button {
+        outline: none;
+    }
 }

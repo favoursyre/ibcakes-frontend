@@ -169,6 +169,7 @@ import 'react-toastify/dist/ReactToastify.css';
             <div className={styles.imageList}>
                 {product.images?.map((image, id) => (
                     <img
+                        className={`${styles.image} ${id === imageIndex ? styles.activeImage : ""}`}
                         onClick={() => setImageIndex(id)}
                         key={id}
                         src={image}
@@ -191,7 +192,10 @@ import 'react-toastify/dist/ReactToastify.css';
             <span className={styles.deliveryDate}><em>Delivered before {deliveryDate}</em></span>
             <div className={styles.order_cart}>
                 <button id={styles.btn1} onClick={(e) => checkout(e)} ><ShoppingCartCheckoutIcon /> <span>Checkout</span></button>
-                <button id={styles.btn2} onClick={(e) => addToCart(e, false)}><AddShoppingCartIcon /> <span>Add To Cart</span></button>
+                <button id={styles.btn2} onClick={(e) => {
+                    addToCart(e, false)
+                    window.location.reload()
+                }}><AddShoppingCartIcon /> <span>Add To Cart</span></button>
             </div>
         </div>
     </div>

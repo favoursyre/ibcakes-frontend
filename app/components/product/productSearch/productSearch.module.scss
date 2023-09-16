@@ -23,6 +23,10 @@
         top: 10%;
     }
 
+    button {
+        outline: none;
+    }
+
     .activeState {
         //border: 1px solid red;
         @include flexBar($position: relative, $flex_d: column, $align: center, $justify: center, $gap: 0%);
@@ -116,7 +120,7 @@
     
                         @include phonePro {
                             //border: 1px solid green;
-                            top: -30%;
+                            top: -12px;
                             font-size: 8px;
                             line-height: 5px;
                             height: 30%;
@@ -152,8 +156,9 @@
                             @include phonePro {
                                 //border: 1px solid red;
                                 @include size(100%, 50%);
-                                font-size: 12px;
+                                font-size: 10px;
                                 left: 3%;
+                                top: 3px;
                                 //margin-bottom: -25px;
                             }
 
@@ -165,7 +170,7 @@
                         .order {
                             @include text-layout($size: 12px, $l_height: 25px, $color: $tertiary-color);
                             background: transparent;
-                            //border: none;
+                            border: none;
                             //border: 1px solid black;
                             @include flexBar($position: relative, $align: center, $justify: flex-end, $flex_d: row, $gap: 1%);
                             @include size(50%, 100%);
@@ -180,6 +185,7 @@
                                 justify-content: flex-start;
                                 @include size(100%, 50%);
                                 left: -3%;
+                                top: 3px;
                             }
 
                             @include phoneMini {
@@ -208,6 +214,8 @@
         @include phonePro {
             @include size(90%, 70%);
             //border: 1px solid red;
+            font-size: 14px;
+            line-height: 20px;
             text-align: center;
         }
 
